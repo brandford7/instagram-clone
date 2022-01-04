@@ -5,12 +5,14 @@ const UserAvatar = ({ img,name }) => {
   return (
     <>
       <Wrap>
-        <WrapItem>
+        <WrapItem >
           <Avatar
+            mx="100px"
             onClick={signOut}
             size="sm"
             _hover={{ cursor: "pointer" }}
-            name={name} src={img}
+            name={name}
+            src={img}
           />
         </WrapItem>
       </Wrap>

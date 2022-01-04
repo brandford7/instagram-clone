@@ -10,12 +10,10 @@ import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
 import { isOpen } from "../redux/Slices/modalSlice";
 
-
-
 const Header = () => {
   const { data: session } = useSession();
   const router = useRouter();
-const open = useSelector(state=> state.modal.value);
+  const open = useSelector((state) => state.modal.value);
   const dispatch = useDispatch();
 
   return (
@@ -31,7 +29,12 @@ const open = useSelector(state=> state.modal.value);
         top="0"
         zIndex="3"
       >
-        <Box cursor="pointer" ml="300px" onClick={() => router.push("/")}>
+        <Box
+          cursor="pointer"
+          ml={["5px", "5px", "480px"]}
+          
+          onClick={() => router.push("/")}
+        >
           <Img
             src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
             alt="Instagram"
@@ -41,26 +44,30 @@ const open = useSelector(state=> state.modal.value);
         </Box>
 
         <Spacer />
-        <Box display="flex">
+        <Box
+          display={["none", "none", "flex"]}
+          ml={{
+            lg: "100px",
+          }}
+        >
           <SearchBar />
         </Box>
         <Spacer />
         {session ? (
           <>
             <Stack
+              ml={{ lg: "200px" }}
               direction="row"
               spacing="4"
               pos="relative"
               pl="24px"
-              mr="300px"
+              mr={["10px", "10px", "300px"]}
             >
               <Box onClick={() => router.push("/")}>
-                
                 <HeaderIcon Icon={FaHome} Color="black" />
               </Box>
               <HeaderIcon Icon={RiMessengerLine} />
               <Box onClick={() => dispatch(isOpen())}>
-                
                 <HeaderIcon Icon={FiPlusSquare} />
               </Box>
               <HeaderIcon Icon={FaRegCompass} />

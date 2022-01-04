@@ -3,17 +3,17 @@ import { Box, chakra, Text } from "@chakra-ui/react";
 const Story = ({ image, name }) => {
   return (
     <>
-      <Box mx="15px" h="68px" w="68px" >
+      <Box   mx="15px" h="68px" w="68px" >
         <chakra.img
-          h="100%"
+    h='100%'
           
-          borderRadius="full"
+          rounded="full"
           src={image}
           alt=""
           border="0.5px solid red"
           p="1.5px"
         />
-        <Text isTruncated fontSize="xs" mb='10px'>
+        <Text isTruncated fontSize="xs"  h='100%' textAlign="center" >
           {name}
         </Text>
       </Box>

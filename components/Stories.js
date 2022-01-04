@@ -32,11 +32,12 @@ const Stories = () => {
       >
         <Box
           display="flex"
-          h="84px"
+          h="105px"
           outline="0"
           overflowY="hidden"
           overflowX="auto"
-        scrollbarwidth="none"
+          
+        
           
         >
           {session && (
