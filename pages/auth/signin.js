@@ -1,7 +1,7 @@
 import { Box, Button, Flex, Img, Stack } from "@chakra-ui/react";
 import React from "react";
 import { getProviders, signIn } from "next-auth/react";
-import Header from "../../components/Header";
+
 
 export default function SignIn({ providers }) {
   return (
