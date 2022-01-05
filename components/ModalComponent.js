@@ -20,7 +20,7 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-import { isOpen, isClose } from "../redux/Slices/modalSlice";
+import { isOpen, isClose } from "../redux/Slices/modalslice";
 import { useSelector, useDispatch } from "react-redux";
 import { FaPhotoVideo } from "react-icons/fa";
 import {

@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, Textarea } from "@chakra-ui/react";
+import {  Flex,  } from "@chakra-ui/react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
