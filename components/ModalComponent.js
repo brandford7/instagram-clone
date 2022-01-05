@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 import {
   Modal,
-  ModalOverlay,
+  
   ModalContent,
   ModalHeader,
   ModalFooter,
