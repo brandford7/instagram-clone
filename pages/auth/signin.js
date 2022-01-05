@@ -1,9 +1,8 @@
 import { Box, Button, Flex, Img, Stack } from "@chakra-ui/react";
 import React from "react";
-import { getProviders, signIn } from "next-auth/react";
+import { getProviders, signIn as SignIn } from "next-auth/react";
 
-
-export default function SignIn({ providers }) {
+export default function signIn({ providers }) {
   return (
     <>
       <Box
@@ -68,7 +67,7 @@ export default function SignIn({ providers }) {
                     shadow="lg"
                     color="primary"
                     bg="blue.300"
-                    onClick={() => signIn(provider.id, { callbackUrl: "/" })}
+                    onClick={() => SignIn(provider.id, { callbackUrl: "/" })}
                   >
                     Sign in with {provider.name}
                   </Button>
