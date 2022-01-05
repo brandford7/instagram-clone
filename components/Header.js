@@ -8,7 +8,7 @@ import UserAvatar from "./UserAvatar";
 import { useSession, signIn } from "next-auth/react";
 import { useRouter } from "next/router";
 import { useSelector, useDispatch } from "react-redux";
-import { isOpen } from "../redux/Slices/modalslice";
+import { isOpen } from "../redux/Slices/modalSlice";
 
 const Header = () => {
   const { data: session } = useSession();
