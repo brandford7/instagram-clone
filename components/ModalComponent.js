@@ -20,7 +20,7 @@ import {
   FormLabel,
 } from "@chakra-ui/react";
 
-import { isOpen, isClose } from "../redux/Slices/modalslice";
+import { isOpen, isClose } from "../redux/Slices/modalSlice";
 import { useSelector, useDispatch } from "react-redux";
 import { FaPhotoVideo } from "react-icons/fa";
 import {
@@ -172,7 +172,7 @@ const ModalComponent = () => {
                   w="auto"
                   h="38px"
                   textAlign="center"
-                  bg={loading ? 'grey' : 'rgba(var(--d69,0,149,246),1)'}
+                  bg={loading ? "grey" : "rgba(var(--d69,0,149,246),1)"}
                   color="white"
                   _hover={{ bg: "rgba(var(--d69,0,149,246),1)" }}
                 >
