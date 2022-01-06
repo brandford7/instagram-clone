@@ -13,7 +13,6 @@ import { db } from "../firebase";
 import CommentSection, { Comment } from "./CommentSection";
 import PostButtons from "./PostButtons";
 import PostHeader from "./PostHeader";
-import PostMedia from "./PostMedia";
 
 const Post = ({ image, caption, userImg, username, time, id, img }) => {
   const { data: session } = useSession();

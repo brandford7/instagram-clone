@@ -40,7 +40,7 @@ const CommentSection = ({ id }) => {
       (snapshot) => setComments(snapshot.docs)
     );
   }),
-    [db,id];
+    [db, id];
 
   const postComment = async (e) => {
     e.preventDefault();
@@ -82,13 +82,18 @@ const CommentSection = ({ id }) => {
                 {/*<span>{comment.data().username}</span> */}
                 <span>{comment.data().comment}</span>
               </Text>
-              <Spacer/>
-           <Box display="flex"  fontSize="14px" mr="10px">  <Moment fromNow>{comment.data().timestamp?.toDate()}</Moment> </Box>
+              <Spacer />
+              <Box display="flex" fontSize="14px" mr="10px">
+                {" "}
+                <Moment fromNow>
+                  {comment.data().timestamp?.toDate()}
+                </Moment>{" "}
+              </Box>
             </Flex>
           ))}
         </Box>
       )}
-      {session &&
+      {session && (
         <Flex
           flex="0 0 auto"
           justifyContent="flex-start"
@@ -172,7 +177,8 @@ const CommentSection = ({ id }) => {
               </InputGroup>
             </HStack>
           </section>
-        </Flex>}
+        </Flex>
+      )}
     </>
   );
 };

@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+
 export default NextAuth({
   providers: [
     GoogleProvider({
@@ -7,6 +8,7 @@ export default NextAuth({
       clientSecret: process.env.GOOGLE_CLIENT_SECRET,
     }),
   ],
+  secret: "MSjR0dWMmL63XT6wfutMpkxFyfv+T9Pv6E6ntiLBYqk=",
   pages: { signIn: "/auth/signin" },
   callbacks: {
     async session({ session, token, user }) {
