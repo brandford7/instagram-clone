@@ -1,10 +1,15 @@
 import { Box, Button, Flex, Img, Stack } from "@chakra-ui/react";
 import React from "react";
 import { getProviders, signIn as SignIn } from "next-auth/react";
+import Head from "next/head"
 
 export default function signIn({ providers }) {
   return (
     <>
+      <Head>
+        <title>signin</title>
+        <meta property="og:title" content="My page title" key="title" />
+      </Head>
       <Box
         display="flex"
         justifyContent="center"
