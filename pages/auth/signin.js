@@ -22,7 +22,7 @@ export default function signIn({ providers }) {
       >
         <section>
           <Box
-            display="flex"
+            display={['none','flex','flex']}
             backgroundImage="	https://www.instagram.com/static/images/homepage/home-phones@2x.png/9364675fb26a.png"
             h="618px"
             w="454px"
