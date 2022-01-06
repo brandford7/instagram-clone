@@ -4,7 +4,7 @@ import {
   
   ModalContent,
   ModalHeader,
-  ModalFooter,
+
   ModalBody,
   ModalCloseButton,
   onClose,
@@ -93,7 +93,7 @@ const ModalComponent = () => {
             maxWidth="667px"
             borderRadius="10px"
           >
-            {/*  <ModalCloseButton onClick={() => dispatch(isClose())} /> */}
+             <ModalCloseButton onClick={() => dispatch(isClose())} /> 
             <ModalHeader
               display="flex"
               alignItems="center"
