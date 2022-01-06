@@ -32,7 +32,7 @@ const Stories = () => {
       >
         <Box
           display="flex"
-          h="105px"
+          h={["70px","105px","105px"]}
           outline="0"
           overflowY="hidden"
           overflowX="auto"

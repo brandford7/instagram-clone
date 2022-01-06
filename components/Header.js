@@ -29,10 +29,9 @@ const Header = () => {
         top="0"
         zIndex="3"
       >
-        <Box
+        <Box display={["none", "none", "flex"]}
           cursor="pointer"
-          ml={["5px", "5px", "480px"]}
-          
+          ml= "480px"
           onClick={() => router.push("/")}
         >
           <Img
@@ -63,15 +62,27 @@ const Header = () => {
               pl="24px"
               mr={["10px", "10px", "300px"]}
             >
-              <Box onClick={() => router.push("/")}>
+              <Box
+                display={["none", "none", "flex"]}
+                onClick={() => router.push("/")}
+              >
                 <HeaderIcon Icon={FaHome} Color="black" />
               </Box>
-              <HeaderIcon Icon={RiMessengerLine} />
-              <Box onClick={() => dispatch(isOpen())}>
+              <Box display={["none", "none", "flex"]}>
+                
+                <HeaderIcon Icon={RiMessengerLine} />{" "}
+              </Box>
+              <Box onClick={() => dispatch(isOpen())} display='flex' mr={{sm: "50px"}}>
                 <HeaderIcon Icon={FiPlusSquare} />
               </Box>
-              <HeaderIcon Icon={FaRegCompass} />
-              <HeaderIcon Icon={FaHeart} />
+              <Box display={["none", "none", "flex"]}>
+                
+                <HeaderIcon Icon={FaRegCompass} />
+              </Box>
+              <Box display={["none", "none", "flex"]}>
+                
+                <HeaderIcon Icon={FaHeart} />
+              </Box>
 
               <UserAvatar
                 name={session?.user?.name}

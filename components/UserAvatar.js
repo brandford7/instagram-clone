@@ -1,13 +1,13 @@
 import { Avatar, Wrap, WrapItem } from "@chakra-ui/react";
-import{signOut} from 'next-auth/react'
+import { signOut } from "next-auth/react";
 
-const UserAvatar = ({ img,name }) => {
+const UserAvatar = ({ img, name }) => {
   return (
     <>
       <Wrap>
-        <WrapItem >
+        <WrapItem>
           <Avatar
-            mx="100px"
+            mx={{ lg: "100px" }}
             onClick={signOut}
             size="sm"
             _hover={{ cursor: "pointer" }}

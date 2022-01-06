@@ -3,7 +3,7 @@ import { Box, IconButton } from "@chakra-ui/react";
 const HeaderIcon = ({ Icon,Color,bG }) => {
   return (
     <>
-      <Box display={['none','none','flex']}>
+      <Box >
       <IconButton borderRadius='none' border='0px none' 
         variant="none"
         icon={<Icon color={Color} bg={bG} w='24' h='24' />}
